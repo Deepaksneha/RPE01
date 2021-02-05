@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test3">
+<suite name="Suite"parallel="tests"thread-count="5">
+  <test thread-count="5" name="ChromeTest">
+  <parameter name="browser" valve="chrome"/>
+    <classes>
+      <class name="demo.democross"/>
+    </classes>
+  </test> <!-- Test3 -->
+  
+    <test thread-count="5" name="FirefoxTest">
+  <parameter name="browser" valve="firefox"/>
     <classes>
       <class name="demo.democross"/>
     </classes>
